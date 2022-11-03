@@ -1,6 +1,7 @@
+const baseURL = "https://golden-nougat-25c1c2.netlify.app/";
 describe("empty spec", () => {
   it("Can log out", () => {
-    cy.visit("http://127.0.0.1:5500/");
+    cy.visit(baseURL);
     cy.wait(500);
     // gets the currently showing close button
     cy.get(".btn-close:visible").click();
