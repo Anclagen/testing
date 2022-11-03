@@ -4,7 +4,6 @@
   "description": "To improve the quality of an existing environment by establishing useful workflows that make the development process more efficient.",
   "main": "index.js",
   "scripts": {
-    "deploy": "npm i && sass src/scss:dist/css",
     "test": "npm run test-unit && npm run test-e2e-cli",
     "build": "sass src/scss:dist/css",
     "start": "sass --watch src/scss:dist/css & live-server",
