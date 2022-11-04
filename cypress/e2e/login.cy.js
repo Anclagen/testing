@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:5173/";
+const baseURL = "http://127.0.0.1:5173/";
 describe("Authentication", () => {
   beforeEach(() => {
     cy.visit(baseURL);
