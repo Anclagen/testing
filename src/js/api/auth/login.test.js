@@ -13,6 +13,7 @@ const TEST_SUCCESS_RESPONSE = {
 
 /**
  * Creates mock local storage to simulate local storage in tests
+ * https://robertmarshall.dev/blog/how-to-mock-local-storage-in-jest-tests/
  */
 class LocalStorageMock {
   constructor() {

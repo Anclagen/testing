@@ -1,5 +1,5 @@
-const baseURL = "https://golden-nougat-25c1c2.netlify.app/";
-describe("empty spec", () => {
+const baseURL = "http://localhost:5173/";
+describe("Logout", () => {
   it("Can log out", () => {
     cy.visit(baseURL);
     cy.wait(500);

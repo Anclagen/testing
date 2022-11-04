@@ -1,4 +1,4 @@
-const baseURL = "https://golden-nougat-25c1c2.netlify.app/";
+const baseURL = "http://localhost:5173/";
 describe("Authentication", () => {
   beforeEach(() => {
     cy.visit(baseURL);
