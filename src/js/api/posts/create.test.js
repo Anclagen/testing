@@ -84,4 +84,9 @@ describe("createPost", () => {
       expect(error).toEqual(new Error("Unauthorized"));
     }
   });
+
+  it("testing", async () => {
+    global.fetch = jest.fn(() => createUnauthorized());
+    await expect(createPost(TEST_TITLE, TEST_BODY, TEST_MEDIA, TEST_BAD_TAGS)).rejects.toThrow("Unauthorized");
+  });
 });
