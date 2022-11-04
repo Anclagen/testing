@@ -17,7 +17,7 @@ jobs:
         run: npm run build
       - name: Run Vite Localhost
         run: npm run dev
-        wait-interval: 10
+        wait-on: "http://localhost:8080"
       - name: run cypress tests with electron
         uses: cypress-io/github-action@v4
         with:

@@ -1,5 +1,12 @@
 // const path = require("path");
 
+export default {
+  server: {
+    port: 8080,
+    hot: true,
+  },
+};
+
 // export default {
 //   root: path.resolve(__dirname, "src"),
 //   resolve: {
