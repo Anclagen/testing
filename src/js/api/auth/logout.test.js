@@ -4,7 +4,8 @@ const TEST_PROFILE = {
   name: "Jester",
   email: "jester@noroff.no",
   banner: null,
-  avatar: "https://cdn.pixabay.com/photo/2016/03/31/20/07/bells-1295520_960_720.png",
+  avatar:
+    "https://cdn.pixabay.com/photo/2016/03/31/20/07/bells-1295520_960_720.png",
 };
 
 /**
@@ -36,7 +37,7 @@ class LocalStorageMock {
 global.localStorage = new LocalStorageMock();
 
 describe("logout", () => {
-  it("Returns a valid access token in local storage and valid response object", () => {
+  it("removes the token and profile from local storage", () => {
     localStorage.setItem("profile", JSON.stringify(TEST_PROFILE));
     localStorage.setItem("token", JSON.stringify(TEST_ACCESS_TOKEN));
     logout();

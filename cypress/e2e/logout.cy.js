@@ -9,18 +9,17 @@ describe("Logout", () => {
     cy.wait(500);
     cy.get("input[type='email']:visible")
       .should("exist")
-      .type(`jester@noroff.no`);
+      .type(Cypress.env("EMAIL"));
     cy.get("input[type='password']:visible")
       .should("exist")
-      .type(`password123`);
+      .type(Cypress.env("PASSWORD"));
     cy.get(".btn-success:visible").click();
-    cy.wait(1000);
+    cy.wait(2000);
     cy.then(() => expect(window.localStorage.getItem("token")).to.not.be.null);
     cy.then(
       () => expect(window.localStorage.getItem("profile")).to.not.be.null
     );
     cy.get("button[data-auth='logout']").click();
-    cy.wait(1000);
     cy.url().should("not.include", "profile");
     cy.then(() => expect(window.localStorage.getItem("token")).to.be.null);
     cy.then(() => expect(window.localStorage.getItem("profile")).to.be.null);
