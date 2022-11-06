@@ -6,6 +6,7 @@ describe("Authentication", () => {
   });
 
   it("Can login", () => {
+    console.log(Cypress.env("EMAIL"));
     cy.visit(baseURL);
     cy.wait(500);
     // gets the currently showing close button

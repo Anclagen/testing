@@ -1,5 +1,10 @@
 const baseURL = "http://127.0.0.1:8080/";
 describe("Logout", () => {
+  beforeEach(() => {
+    cy.visit(baseURL);
+    cy.clearLocalStorage();
+  });
+
   it("Can log out", () => {
     cy.visit(baseURL);
     cy.wait(500);
