@@ -45,6 +45,7 @@ describe("Create Post", () => {
   });
 
   it("Can validate inputs, require inputs and return validation messages", () => {
+    // used should exist for popup invalid messages as the messages can vary.
     cy.wait(500);
     cy.get('a[href="/?view=post"]').click();
     cy.wait(2000);
@@ -53,7 +54,7 @@ describe("Create Post", () => {
     cy.get('button[data-action="submit"]').click();
     cy.get("#postTitle:invalid")
       .invoke("prop", "validationMessage")
-      .should("include", "Please fill in this field");
+      .should("exist");
     cy.wait(200);
     // not a url
     cy.get("#postTitle").should("exist").type("Cypress Testing Posts");
@@ -61,7 +62,7 @@ describe("Create Post", () => {
     cy.get('button[data-action="submit"]').click();
     cy.get("#postMedia:invalid")
       .invoke("prop", "validationMessage")
-      .should("include", "Please enter a URL");
+      .should("exist");
     cy.wait(200);
     // post needs a title
     cy.get("#postTitle").should("exist").clear();
@@ -80,7 +81,7 @@ describe("Create Post", () => {
     cy.get('button[data-action="submit"]').click();
     cy.get("#postTitle:invalid")
       .invoke("prop", "validationMessage")
-      .should("include", "Please fill in this field");
+      .should("exist");
   });
 
   it("Handles thrown errors", () => {
