@@ -6,11 +6,12 @@
   "scripts": {
     "test": "npm run test-unit && npm run test-e2e-cli",
     "build": "sass src/scss:dist/css",
-    "start": "sass --watch src/scss:dist/css & live-server",
+    "start": "sass --watch src/scss:dist/css & vite",
     "format": "prettier -w src/**/*.js",
     "lint": "eslint src/**/*.js",
     "lint-fix": "eslint src/**/*.js --cache --fix",
     "test-unit": "jest",
+    "test-unit-t": "jest",
     "test-e2e": "cypress open",
     "test-e2e-report": "cypress run --reporter mochawesome",
     "test-e2e-cli": "cypress run",
@@ -54,8 +55,7 @@
   "lint-staged": {
     "*.js": [
       "prettier --write",
-      "eslint --fix",
-      "jest --findRelatedTests"
+      "eslint --fix"
     ],
     "*.html": [
       "prettier --write"
