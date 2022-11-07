@@ -6,11 +6,12 @@ const TEST_SUCCESS_RESPONSE = {
   name: "Jester",
   email: "jester@noroff.no",
   banner: null,
-  avatar: "https://cdn.pixabay.com/photo/2016/03/31/20/07/bells-1295520_960_720.png",
+  avatar:
+    "https://cdn.pixabay.com/photo/2016/03/31/20/07/bells-1295520_960_720.png",
   accessToken:
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpZVAJ9.eyJpZCI6NzgsIm5hbWUiOiJKZXT0ZXIiLCJlbWFpbCI6Implc3RlckBub3JvZmYubm8iLCJhdmF0YXIiOiJodHRwczovL2Nkbi5waXhhYmF5LmNvbS9waG90by8yMDE2LzAzLzMxLzIwLzA3L2JlbGxzLTEyOTU1MjBfOTYwXzcyMC5wbmciLCJiYW5uZXIiOm51bGwsImlhdCI6MTY2NzM0MTk3OX0.Xv1or7mZ-skJOSqbew99CuzSMOLaRU1z3z_QWdUFMIs",
 };
-
+//tt
 /**
  * Creates mock local storage to simulate local storage in tests
  * https://robertmarshall.dev/blog/how-to-mock-local-storage-in-jest-tests/
