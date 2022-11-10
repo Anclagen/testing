@@ -9,5 +9,5 @@ export async function loginListener(event) {
   const password = data.get("password")
   const { name } = await auth.login(email, password)
   updateLoginVisibility()
-  location.href = `/?view=profile&name=${name}`
+  location.href = `./?view=profile&name=${name}`
 }
